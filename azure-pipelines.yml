@@ -25,14 +25,3 @@ steps:
   inputs:
     pathToPublish: $(Build.ArtifactStagingDirectory)
     artifactName: AspNetCoreExample         
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'publish'
-    publishWebProjects: true
-    zipAfterPublish: true
-    arguments: '--output $(build.artifactstagingdirectory)'
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathToPublish: $(Build.ArtifactStagingDirectory)
-    artifactName: AspNetCoreExample
